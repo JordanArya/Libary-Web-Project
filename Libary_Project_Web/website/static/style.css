@@ -1,0 +1,59 @@
+#offcanvasNavbarLabel{
+	font: 30px bolder;
+}
+
+#profile{
+	margin-right: 18.5px;
+}
+
+#sidebar{
+	margin-top: 30px;
+}
+
+.nav-button{
+	margin-top: 5%;
+	font-size: 25px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-radius: 20px;
+	text-align: left;
+
+}
+
+.recent-box{
+/*	background-color: black;*/
+	height: 260px;
+}
+
+.nav-button:hover{
+	background: lightgray;
+}
+
+.nav-button:visited{
+	background: lightgray;
+}
+
+#favorite-icon{
+	margin-right: 25px;
+	height: 26px;
+}
+
+.addbook_box{
+	display: none;
+	z-index: 2;
+	overflow: auto;
+}
+
+.addbook_box button{
+	font-size: 22px;
+	position: absolute;
+	right: 5%;
+	width: 5%;
+	height: 7%;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.addbook_box #file-form{
+	border-bottom: 0px;
+}

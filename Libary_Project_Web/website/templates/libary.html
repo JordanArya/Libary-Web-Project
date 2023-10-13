@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home_style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='libary_style.css')}}">
+<script type="text/javascript" src="{{url_for('static', filename='libary_script.js')}}"></script>
+
+<body>
+	<div class="recent-box" id="first-box">
+		<h3>Libary</h3>
+
+			{% for book in book_list %}
+
+				<div class="title-container">
+
+					{% if edit != None %}
+						<a class="delete-button btn-close" href="{{ url_for('views.delete', id = book.id) }} "></a>
+					{% endif %}
+
+					<a  href="{{url_for('views.content',id = (book.book_id-1), edit = None)}}">
+						<div class="book">
+							<img src="{{url_for('static', filename= book.image_file)}}"  class="q-picture" id="q-picture">
+						</div>
+						<h5 class="author">{{ book.title }}</h5>
+						<h5 class="book-title">{{ book.title + ' ' + book.volume}}</h5>
+					</a>
+				</div>
+
+			{% endfor%} 
+		</div>
+
+	</div>	
+</body>
+
+
+
+
+{% endblock content %}
+
+
+
+

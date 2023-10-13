@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home_style.css')}}">
+<script type="text/javascript" src="{{url_for('static', filename='home_script.js')}}"></script>
+
+<body>
+	<div class="recent-box" id="first-box">
+		<h3>Recent Added</h3>
+
+		{% for book in book_list %}
+				
+				<a class="title-container" href="{{url_for('views.content',id = (book.book_id-1), edit = False)}}">
+					<div class="book">
+						<img src="{{url_for('static', filename= book.image_file)}}"  class="q-picture" id="q-picture">
+					</div>
+					<h5 class="author">{{ book.author }}</h5>
+					<h5 class="book-title">{{ book.title + ' ' + book.volume }}</h5>
+				</a>
+
+		{% endfor%} 
+
+	</div>	
+	<br>
+	<div class="recent-box">
+		<h3>Recent Added</h3>
+
+		<div class="product-box">
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_101.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 101</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_93.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 93</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_94.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 94</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+		</div>
+	</div>	
+	<br>
+	<div class="recent-box">
+		<h3>Recent Added</h3>
+
+		<div class="product-box">
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_101.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 101</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_93.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 93</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_94.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 94</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+		</div>
+
+	</div>	
+	<br>
+	<div class="recent-box">
+		<h3>Recent Added</h3>
+
+		<div class="product-box">
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_101.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 101</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_93.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 93</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_94.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 94</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+			<a class="title-container" href="#">
+				<div class="book">
+					<img src="{{url_for('static', filename='Book_Picture/Conan_volume_97.jpg')}}"  class="q-picture" id="q-picture">
+				</div>
+				<h5 class="author">aoyama gosho</h5>
+				<h5 class="book-title">Detective Conan 97</h5>
+			</a>
+
+		</div>
+
+	</div>	
+	<br>
+</body>
+
+
+
+
+{% endblock content %}
+
+
+
+

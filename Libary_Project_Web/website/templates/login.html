@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %} Login {% endblock title %}
+
+
+{% block content %}
+
+<!-- Import Section -->
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login_style.css')}}">
+<script type="text/javascript" src="{{url_for('static', filename='login_script.js')}}"></script>
+
+<!-- Design Section -->
+
+<body>
+	<section class="login-box">
+		<h2>Login</h2>
+		<hr>
+
+		<form class="login-form" action="{{url_for('auth.login')}}"method='post'>
+
+			{{ form.hidden_tag() }}
+
+			<!-- Alert Message Box -->
+
+			{% with messages = get_flashed_messages(with_categories=true) %}
+
+				{% if messages %}
+					{% for category,message in messages %}
+						{%if category == 'error'%}
+
+							<div class="alert alert-warning alert-dismissible fade show" role="alert"> {{message}}   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div> 
+
+
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+			{% endwith %}
+
+			<!-- Form Section -->
+
+			{{ form.username.label(class="insert-header")}}
+
+			{{ form.username(placeholder= "Enter Username", class="insert-box")}}
+
+
+			{{ form.password.label(class="insert-header")}}
+
+			{{ form.password(placeholder= "Enter Password", class="insert-box")}}
+
+			{{ form.submit(id="submit-button") }}
+			
+			<p id="signup-anchor">
+				Not a member
+				<a href="{{url_for('auth.signup')}}">Sign Up</a>
+			</p>
+
+		</form>
+		
+	</section>
+
+</body>
+
+
+{% endblock %}

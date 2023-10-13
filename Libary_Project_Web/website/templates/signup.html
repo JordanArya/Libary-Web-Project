@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %} SignUp {% endblock title %}
+
+
+{% block content %}
+
+<!-- Import Section -->
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login_style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='signup_style.css')}}">
+<script type="text/javascript" src="{{url_for('static', filename='signup_script.js')}}"></script>
+
+<!-- Design Section -->
+
+<body>
+	<section class="login-box">
+		<h2>SignUp</h2>
+		<hr>
+
+
+
+
+		<form class="login-form"  action="{{url_for('auth.signup')}}"method='post'>
+
+			<!-- Alert Section -->
+			{% for error in form.password.errors%} <div class="alert alert-warning alert-dismissible fade show" role="alert"> {{error}}   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> <!-- <button onclick="addbook_visibilty()"></button> --> </div> {% endfor %}
+
+			{% with messages = get_flashed_messages(with_categories=true) %}
+
+				{% if messages %}
+					{% for category,message in messages %}
+						{%if category == 'error'%}
+
+							<div class="alert alert-warning alert-dismissible fade show" role="alert"> {{message}}   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div> 
+
+
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+			{% endwith %}
+
+			<!-- Form Section -->
+
+			{{ form.hidden_tag() }}
+
+			{{ form.username.label(class="insert-header")}}
+
+			{{ form.username(placeholder= "Enter Username", class="insert-box")}}
+
+
+			{{ form.password.label(class="insert-header")}}
+
+			{{ form.password(placeholder= "Enter Password", class="insert-box")}}
+
+
+			{{ form.confirm_password.label(class="insert-header")}}
+
+			{{ form.confirm_password(placeholder= "Enter Password", class="insert-box")}}
+
+			{{ form.submit(id="submit-button") }}
+			
+			<p id="signup-anchor">
+				Already a member
+				<a href="{{ url_for('auth.login') }}">Sign In</a>
+			</p>
+
+		</form>
+		
+	</section>
+
+</body>
+
+
+{% endblock %}

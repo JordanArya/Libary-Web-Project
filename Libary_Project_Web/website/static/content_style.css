@@ -1,0 +1,122 @@
+
+.parent-box{
+	
+	margin: 5% 0% 1% 1%;
+
+}
+
+
+
+.information-box{
+	display: flex;
+	position: absolute;
+	width: 90%;
+	height: 50%;
+
+}
+
+.description-box{
+	text-align: justify;
+	width: 50%;
+	padding-top: 0.5%;
+	padding-left: 2%;
+}
+
+
+.q-picture{
+	max-width: 80%;
+	max-height: 80%;
+	padding-bottom: 5%;
+}
+
+.header-picture{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.recent-box{
+	position: absolute;
+	top:75%;
+	width: 97%;
+	height: 50%;
+	margin-left: 2%;
+
+}
+
+.title-container{
+	text-decoration: none;
+	width: 9.5%;
+	margin: 0.8%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	padding-top: 0.3%;
+	box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.book{
+	margin-top: 1%;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.author{
+	text-align: left;
+	margin-left: 8%;
+	font: 75% Cambria;
+	color: slategray;
+	text-transform: capitalize;
+}
+
+.book-title{
+	color: black;
+	text-align: left;
+	margin-left: 8%;
+	margin-bottom: 10%;
+	font: 90% Cambria;
+	max-width: 100%;
+	text-transform: capitalize;
+}
+
+.product-box{
+	padding-left: 0.5%;
+}
+
+.image-box{
+	position: absolute;
+	left: 60%;
+	top: 10%;
+	text-decoration: none;
+	width: 20%;
+	height: 110%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 0.8% 0.8%;
+	padding-bottom: 0.8%;
+	box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+b{
+	display: inline-block;
+	width: 30%;
+	position: relative;
+	padding-right: 10px;
+	text-transform: capitalize;
+}
+
+b::after{
+	content: ":";
+	position: absolute;
+	right: 10px;
+}
+
+em{
+	font-style: normal;
+}
+

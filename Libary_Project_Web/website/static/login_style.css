@@ -1,0 +1,78 @@
+body{
+/*	background-color: #f0f0f0;*/
+}
+
+.login-box{
+	background-color: white;
+	position: absolute;
+	left: 30%;
+	top: 20%;
+	text-decoration: none;
+	width: 40%;
+	height: 60%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	border-radius: 10px;
+	padding: 0.8% 0.8%;
+	padding-bottom: 0.8%;
+	box-shadow: 0px 14px 18px rgba(0, 0, 0, 0.3), 0px 10px 22px rgba(222, 234, 238, 0.2);
+	overflow: auto;
+}
+
+hr{
+
+}
+
+.login-box h2{
+	padding-top: 2%;
+}
+
+.username-title{
+	text-align: left;
+	margin-top: 7%;
+	margin-left: 3%;
+}
+
+.login-form{
+	text-align: left;
+}
+
+.login-form .insert-header{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.login-form .insert-box{
+	outline: none;
+	width: 89%;
+	margin-left: 5% ;
+	margin-bottom: 5%;
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	padding-top: 2%;
+	height: 40px;
+	color: black;
+	font-size: 16px;
+}
+
+.login-form #submit-button{
+	outline: none;
+	border: none;
+	margin-left: 10%;
+	margin-bottom: 3.5%;
+	width: 80%;
+	height: 40px;
+	border-radius: 30px;
+	background-color: #DCDCDC;
+}
+
+.login-form #signup-anchor{
+	text-align: center;
+	font-style: none;
+	text-decoration: none;
+}
+
+
+
